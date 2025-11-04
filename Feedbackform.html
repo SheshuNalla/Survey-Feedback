@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Survey</title>
+    
+</head>
+<body>
+
+<div >
+    <h1>Product Feedback Survey</h1>
+    <form action="/submit-feedback" method="post">
+        
+        <fieldset>
+            <legend>1. Overall, how satisfied are you with our product?</legend>
+            <div class="radio-group">
+                <input type="radio" id="satisfied" name="satisfaction" value="Satisfied" required>
+                <label for="satisfied">Satisfied</label>
+                
+                <input type="radio" id="neutral" name="satisfaction" value="Neutral">
+                <label for="neutral">Neutral</label>
+                
+                <input type="radio" id="dissatisfied" name="satisfaction" value="Dissatisfied">
+                <label for="dissatisfied">Dissatisfied</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>2. Which features do you use regularly? (Select all that apply)</legend>
+            <div class="checkbox-group">
+                <input type="checkbox" id="feature1" name="features" value="Analytics">
+                <label for="feature1">Analytics Dashboard</label><br>
+                
+                <input type="checkbox" id="feature2" name="features" value="Reporting">
+                <label for="feature2">Custom Reporting</label><br>
+                
+                <input type="checkbox" id="feature3" name="features" value="Integration">
+                <label for="feature3">API Integration</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>3. Rate the ease of use of the interface (1=Very Difficult, 5=Very Easy)</legend>
+            <div class="rating-group">
+                <label for="rating1">1
+                    <input type="radio" id="rating1" name="easeOfUse" value="1" required>
+                </label>
+                <label for="rating2">2
+                    <input type="radio" id="rating2" name="easeOfUse" value="2">
+                </label>
+                <label for="rating3">3
+                    <input type="radio" id="rating3" name="easeOfUse" value="3">
+                </label>
+                <label for="rating4">4
+                    <input type="radio" id="rating4" name="easeOfUse" value="4">
+                </label>
+                <label for="rating5">5
+                    <input type="radio" id="rating5" name="easeOfUse" value="5">
+                </label>
+            </div>
+        </fieldset>
+
+        <div class="form-group">
+            <label for="name">4. What is your role? (e.g., Developer, Manager)</label>
+            <input type="text" id="name" name="userRole" required>
+        </div>
+
+        <div class="form-group">
+            <label for="source">5. How did you hear about us?</label>
+            <select id="source" name="referralSource" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Search">Search Engine</option>
+                <option value="Social">Social Media</option>
+                <option value="Referral">Colleague/Referral</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="suggestions">6. Do you have any suggestions for improvement?</label>
+            <textarea id="suggestions" name="suggestions" rows="5"></textarea>
+        </div>
+
+        <button type="submit">Submit Feedback</button>
+
+    </form>
+</div>
+
+</body>
+</html>
